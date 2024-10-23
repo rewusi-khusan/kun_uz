@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<main>
+    <div style="width: 800px; margin: 40px 100px;">
+        <div style="display: flex; align-items: center; justify_content: center; gap: 12px">
+            <p style="color: black;">{{ new.category }} | {{ new.published_time }}</p>
+            <p>|</p>
+            <i class="fas fa-eye"></i>
+            <p style="color: black;">{{ new.views_count }}</p>
+        </div>
+        <h2 style="font-weight: bold; margin: 20px 0; color: #0c2f75;">{{ new.title }}</h2>
+        <h5>{{ new.subtitle }}</h5>
+        <img src="{{ new.image.url }}" alt="{{ new.title }}" style="width: 700px; margin: 20px 0;">
+        <p style="font-size: 16px; font-weight: 500;">{{ new.description }}</p>
+    </div>
+</main>
+
+{% endblock %}

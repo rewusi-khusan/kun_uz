@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 		<!-- CSS here -->
             <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
@@ -88,25 +89,20 @@
                             <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                                 <!-- sticky -->
                                     <div class="sticky-logo">
-                                        <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                                        <a href="index.html"><img width="150" src="{% static 'assets/img/logo/kun_uz.png' %}" alt=""></a>
                                     </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="categori.html">Category</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="latest_news.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="details.html">Categori Details</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href="{% url 'categories_view' %}">O'zbekiston</a></li>
+                                            <li><a href="{% url 'categories_view' %}">Jahon</a></li>
+                                            <li><a href="{% url 'categories_view' %}">Iqtisodiyot</a></li>
+                                            <li><a href="{% url 'categories_view' %}">Jamiyat</a></li>
+                                            <li><a href="{% url 'categories_view' %}">Sport</a>
+                                            <li><a href="{% url 'categories_view' %}">Fan-texnika</a>
+                                            <li><a href="{% url 'categories_view' %}">Nuqtayi nazar</a></li>
                                         </ul>
                                     </nav>
                                 </div>

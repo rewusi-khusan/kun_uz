@@ -17,6 +17,7 @@ class News(models.Model):
     published_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    views_count = models.IntegerField(default=0)
 
 
     def __str__(self):
